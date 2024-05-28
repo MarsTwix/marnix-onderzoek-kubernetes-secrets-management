@@ -1,14 +1,16 @@
 # Kubernetes Secret Management: Het Geheime Ingrediënt voor Sterke Applicatiebeveiliging
 
-*Marnix Wildeman*, Maart 2024
+*Marnix Wildeman*, maart 2024
 <br/>
 Github URL: https://github.com/MarsTwix/marnix-onderzoek-kubernetes-secrets-management
 <hr>
 
 <img align="right" style="width: 140px;" src="https://in4it.com/wp-content/uploads/2020/11/secret.jpg">
-<img align="right" style="width: 140px;" src="https://b2750956.smushcdn.com/2750956/wp-content/uploads/2021/01/3-31510_svg-kubernetes-logo-hd-png-download-696x664.png?lossy=1&strip=1&webp=1">
+<img align="right" style="width: 140px;" src="Kubernetes_logo_without_workmark.svg">
 
 Ik volg op het moment de minor DevOps aan de Hogeschool van Arnhem en Nijmegen. Mij leek het erg interessant om een onderzoek te doen naar Kubernetes Secret Management. Ik heb dit onderwerp gekozen omdat ik het interessant vind om te leren hoe je gevoelige informatie veilig kunt opslaan en beheren in Kubernetes. Ik heb dit onderzoek gedaan om meer te leren over Kubernetes Secret Management en om mijn kennis te delen met anderen.
+
+(Logo's attributie: Google, Inc. (2016) en In4It (z.d.).)
 
 ## Wat is Kubernetes Secret Management?
 
@@ -269,11 +271,11 @@ spec:
 
 ## Good Practices
 
-De volgende best practices zijn bedoeld voor zowel clusterbeheerders als applicatieontwikkelaars. Gebruik deze richtlijnen om de beveiliging van jouw gevoelige informatie in secret objecten te verbeteren en om jouw secrets effectiever te beheren. (Good practices for kubernetes secrets, 2023)
+De volgende best practices zijn bedoeld voor zowel clusterbeheerders als applicatieontwikkelaars. Gebruik deze richtlijnen om de beveiliging van jouw gevoelige informatie in secret objecten te verbeteren en om jouw secrets effectiever te beheren (Kubernetes Documentation, 2023).
 
 ### Gebruik Namespaces
 
-Gebruik namespaces om jouw secrets te isoleren en de toegang daartoe te beperken. Je kunt voor elk team of elke applicatie een aparte namespaces aanmaken en alleen toegang verlenen aan het noodzakelijke personeel. (Demaku, 2023)
+Gebruik namespaces om jouw secrets te isoleren en de toegang daartoe te beperken. Je kunt voor elk team of elke applicatie een aparte namespaces aanmaken en alleen toegang verlenen aan het noodzakelijke personeel (Demaku, 2023).
 
 ### Beperk geheime toegang tot specifieke containers
 
@@ -281,7 +283,7 @@ Als je meerdere containers in een pod definieert en slechts één van die contai
 
 ### Bescherm geheime gegevens na het lezen
 
-Applicaties moeten nog steeds de waarde van vertrouwelijke informatie beschermen nadat deze uit een environment variable of volume is gelezen. Jouw applicatie moet bijvoorbeeld voorkomen dat de geheime gegevens openbaar worden geregistreerd of naar een niet-vertrouwde partij worden verzonden. (Good practices for kubernetes secrets, 2023)
+Applicaties moeten nog steeds de waarde van vertrouwelijke informatie beschermen nadat deze uit een environment variable of volume is gelezen. Jouw applicatie moet bijvoorbeeld voorkomen dat de geheime gegevens openbaar worden geregistreerd of naar een niet-vertrouwde partij worden verzonden (Kubernetes Documentation, 2023).
 
 ### Gebruik RBAC
 
@@ -335,16 +337,15 @@ Populaire tools voor Secret Management in Kubernetes zijn HashiCorp Vault, Akeyl
 
 ## Bronnen
 
-Overview (2024) Kubernetes. Beschikbaar op: https://kubernetes.io/docs/concepts/overview/ (geraadpleegd: 28 maart 2024).
+- Kubernetes Advocate (16-2-2021). *Secrets management in kubernetes* Medium. Geraadpleegd 28-5-2024 op <https://medium.com/avmconsulting-blog/secrets-management-in-kubernetes-378cbf8171d0>
+- Demaku, A. (23-2-2023) *Managing kubernetes secrets: Best practices and examples* Medium. Geraadpleegd 28-5-2024 op <https://medium.com/@arton.demaku/managing-kubernetes-secrets-best-practices-and-examples-85eaeb6a6835>
+- Kubernetes.io (19-9-2023) *Kubernetes* Geraadpleegd 28-5-2024 op <https://kubernetes.io/docs/concepts/overview/>
+- Lee, K. (7-2-2024) *How Does Kubernetes Work?* Geraadpleegd 28-5-2024 op <https://www.suse.com/c/how-does-kubernetes-work/>
+- Kubernetes Documentation (26-3-2024) *Secrets | Kubernetes*. Geraadpleegd 28-5-2024 op <https://kubernetes.io/docs/concepts/configuration/secret/>
+- Kubernetes Documentation (27-8-2023) *Good practices for Kubernetes secrets* Kubernetes. Geraadpleegd 28-5-2024 op <https://kubernetes.io/docs/concepts/security/secrets-good-practices/>
+- Saurabh Gupta, S.G. (12-4-2022) *Popular Secret Management Tools for Kubernetes workloads in 2022* Medium. Geraadpleegd 28-5-2024 op <https://medium.com/@DevopsFollower/popular-secret-management-tools-for-kubernetes-workloads-in-2022-6d9027accf7c>
 
-Ken Lee, K. (2024) How Does Kubernetes Work? Beschikbaar op: https://www.suse.com/c/how-does-kubernetes-work/ (geraadpleegd: 28 maart 2024).
+## Attributie
 
-Secrets (2023) Kubernetes. Beschikbaar op: https://kubernetes.io/docs/concepts/configuration/secret/ (geraadpleegd: 05 oktober 2023).
-
-Advocate, K. (2021) Secrets management in kubernetes, Medium. Beschikbaar op: https://medium.com/avmconsulting-blog/secrets-management-in-kubernetes-378cbf8171d0 (geraadpleegd op 05 oktober 2023).
-
-Good practices for kubernetes secrets (2023) Kubernetes. Beschikbaar op: https://kubernetes.io/docs/concepts/security/secrets-good-practices/ (geraadpleegd: 05 oktober 2023).
-
-Demaku, A. (2023) Managing kubernetes secrets: Best practices and examples, Medium. Beschikbaar op: https://medium.com/@arton.demaku/managing-kubernetes-secrets-best-practices-and-examples-85eaeb6a6835 (geraadpleegd: 05 oktober 2023).
-
-(Saurabh Gupta), S.G. (2022) Popular Secret Management Tools for Kubernetes workloads in 2022, Medium. Beschikbaar op: https://medium.com/@DevopsFollower/popular-secret-management-tools-for-kubernetes-workloads-in-2022-6d9027accf7c (geraadpleegd: 05 oktober 2023).
+- Google, Inc. (5 April 2016) *File:Kubernetes logo without workmark.svg*. Wikimedia Commons. Geraadpleegd 28-5-2024 op <https://commons.wikimedia.org/wiki/File:Kubernetes_logo_without_workmark.svg>
+- In4It (z.d.) *Kubernetes Secrets Management - IN4IT - DevOps and Cloud* In4It.com https://in4it.com/kubernetes-secrets-management/ en https://in4it.com/wp-content/uploads/2020/11/secret.jpg
